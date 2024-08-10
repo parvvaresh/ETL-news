@@ -59,7 +59,7 @@ class preprocessing:
     return list(result)
   
 
-def preprocessing_text(df : pd.DataFrame, column : str) -> pd.DataFrame:
+def preprocessing_pipline(df : pd.DataFrame, column : str) -> pd.DataFrame:
   pp = preprocessing()
 
 
