@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 
-from parameter_finder import classification_parameter_finder
-from models.models import get_details_models
+from .parameter_finder import classification_parameter_finder
+from .models.models import get_details_models
 
 import warnings
 from sklearn.exceptions import ConvergenceWarning
@@ -40,7 +40,7 @@ def train_models(X : np.array,
 
         results.append(_result)
         results_df = pd.concat(results, ignore_index=True)
-        results_df.to_csv("./result/result.csv")
+        results_df.to_csv("rresult.csv")
 
 
 
@@ -48,6 +48,6 @@ def train_models(X : np.array,
 
     results = pd.concat(results, ignore_index=True)
 
-    results.to_csv("./result/result.csv")
+    results.to_csv("result.csv")
 
     print("             ✅save result in local path✅              ")
